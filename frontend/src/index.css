@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(135deg, #FFF8F5 0%, #F4E9F3 50%, #FFF8F5 100%);
+  background-attachment: fixed;
+  font-family: 'Inter', sans-serif;
+  color: #2F172E;
+}
+
+/* key-tag chip: updated for Plum and Peach theme */
+.key-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  padding: 0.15rem 0.5rem;
+  border-radius: 6px;
+  background: #F4E9F3;
+  color: #542A52;
+  border: 1px solid #EADBE6;
+  transition: all 0.3s ease;
+}
+
+.key-tag:hover {
+  background: #EADBE6;
+  transform: translateY(-1px);
+}
+
+.key-tag::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: #FFB39A;
+  flex-shrink: 0;
+  box-shadow: 0 0 6px rgba(255, 179, 154, 0.8);
+}
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: #EADBE6; border-radius: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+
+:focus-visible {
+  outline: 2px solid #FFB39A;
+  outline-offset: 2px;
+}
